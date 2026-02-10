@@ -6,7 +6,7 @@
             "hidden": true,
             "generator": "Ninja",
             "cacheVariables": {
-                "CMAKE_CXX_COMPILER": "clang-cl"
+                "CMAKE_CXX_COMPILER": "cl"
             },
             "condition": {
                 "type": "equals",
