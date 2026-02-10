@@ -41,6 +41,16 @@
             }
         },
         {
+            "name": "windows-relwithdebinfo",
+            "generator": "Ninja",
+            "inherits": "windows-base",
+            "binaryDir": "${sourceDir}/build/RelWithDebInfo",
+            "cacheVariables": {
+                "CMAKE_BUILD_TYPE": "RelWithDebInfo",
+                "CMAKE_TOOLCHAIN_FILE": "${sourceDir}/build/RelWithDebInfo/generators/conan_toolchain.cmake"
+            }
+        },
+        {
             "name": "linux-base",
             "hidden": true,
             "generator": "Ninja",
@@ -72,6 +82,16 @@
                 "CMAKE_BUILD_TYPE": "Release",
                 "CMAKE_TOOLCHAIN_FILE": "${sourceDir}/build/Release/generators/conan_toolchain.cmake"
             }
+        },
+        {
+            "name": "linux-relwithdebinfo",
+            "generator": "Ninja",
+            "inherits": "linux-base",
+            "binaryDir": "${sourceDir}/build/RelWithDebInfo",
+            "cacheVariables": {
+                "CMAKE_BUILD_TYPE": "RelWithDebInfo",
+                "CMAKE_TOOLCHAIN_FILE": "${sourceDir}/build/RelWithDebInfo/generators/conan_toolchain.cmake"
+            }
         }
     ],
     "buildPresets": [
@@ -90,6 +110,14 @@
         {
             "name": "linux-release",
             "configurePreset": "linux-release"
+        },
+        {
+            "name": "windows-relwithdebinfo",
+            "configurePreset": "windows-relwithdebinfo"
+        },
+        {
+            "name": "linux-relwithdebinfo",
+            "configurePreset": "linux-relwithdebinfo"
         }
     ],
     "testPresets": [
@@ -117,6 +145,20 @@
         {
             "name": "linux-release",
             "configurePreset": "linux-release",
+            "output": {
+                "outputOnFailure": true
+            }
+        },
+        {
+            "name": "windows-relwithdebinfo",
+            "configurePreset": "windows-relwithdebinfo",
+            "output": {
+                "outputOnFailure": true
+            }
+        },
+        {
+            "name": "linux-relwithdebinfo",
+            "configurePreset": "linux-relwithdebinfo",
             "output": {
                 "outputOnFailure": true
             }
