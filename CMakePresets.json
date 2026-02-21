@@ -104,16 +104,16 @@
             "configurePreset": "windows-release"
         },
         {
+            "name": "windows-relwithdebinfo",
+            "configurePreset": "windows-relwithdebinfo"
+        },
+        {
             "name": "linux-debug",
             "configurePreset": "linux-debug"
         },
         {
             "name": "linux-release",
             "configurePreset": "linux-release"
-        },
-        {
-            "name": "windows-relwithdebinfo",
-            "configurePreset": "windows-relwithdebinfo"
         },
         {
             "name": "linux-relwithdebinfo",
@@ -136,6 +136,13 @@
             }
         },
         {
+            "name": "windows-relwithdebinfo",
+            "configurePreset": "windows-relwithdebinfo",
+            "output": {
+                "outputOnFailure": true
+            }
+        },
+        {
             "name": "linux-debug",
             "configurePreset": "linux-debug",
             "output": {
@@ -145,13 +152,6 @@
         {
             "name": "linux-release",
             "configurePreset": "linux-release",
-            "output": {
-                "outputOnFailure": true
-            }
-        },
-        {
-            "name": "windows-relwithdebinfo",
-            "configurePreset": "windows-relwithdebinfo",
             "output": {
                 "outputOnFailure": true
             }
